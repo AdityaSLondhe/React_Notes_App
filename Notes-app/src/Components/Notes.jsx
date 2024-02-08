@@ -21,9 +21,9 @@ const Notes = () => {
 
  const saveHandler=()=>{
     if(editToggle){
-        setNotes(notes.map(note=>{
+        setNotes(notes.map(note=>(
             note.id===editToggle ? {...note,text:inputText} : note
-        }))
+        )))
     }else{
         setNotes((preNotes)=>[...preNotes,{
             id: uuid4(),
